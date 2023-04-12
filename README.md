@@ -1,0 +1,8 @@
+# Basic-expense-tracker
+This is a Python code for an Expense Tracker application built using PyQt5 GUI framework and SQLite database. The main functionality of the code is to provide a graphical interface for users to track their expenses by entering the date, name, title, and expense amount. The entered expenses are stored in a SQLite database for future reference. The application allows users to view their entered expenses and the total amount spent.
+
+The code imports required PyQt5 and SQLite libraries and loads the user interface design from an external .ui file using the loadUi method. The class ExpenseTracker inherits from QMainWindow class and initializes the UI using the init_ui method. The UI consists of a table to display expenses, text boxes to enter expense details, buttons to submit and view expenses, and a label to display the total expenses.
+
+The create_database_table method creates a new SQLite database table to store the expense details, if it does not already exist. The submit_expense method retrieves the entered expense details and inserts them into the SQLite database table. It also updates the expense table in the UI by inserting a new row with the entered details. The view_expenses method retrieves all the entered expenses from the SQLite database table and displays them in the expense table in the UI. It also calculates the total amount spent and displays it in the label.
+
+The if name == 'main': block initializes a new PyQt5 QApplication and creates an instance of the ExpenseTracker class. It then runs the event loop using the app.exec_() method, which listens for user events and updates the UI accordingly.
